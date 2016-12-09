@@ -1,3 +1,5 @@
+# Scaffolding
+
 <p><a href=".">. link</a></p>
 <p><a href="." class="link-gray">link-gray</a></p>
 <p><a href="." class="muted-link">muted-link</a></p>
@@ -14,6 +16,10 @@
 <p class="text-emphasized">text-emphasized</p>
 
 ```js
-// c'mon
+// js
 console.log('are', ere, function (t) { return 'ire'; });
+```
+
+```css
+body { margin: 50px; background-image: url(http://www.example.com); }
 ```
