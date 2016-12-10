@@ -1,4 +1,3 @@
-<div class="markdown-body">
 # HOME
 
 ## Steps
@@ -11,4 +10,7 @@
 
 - [forms](forms)
 - [scaffolding](scaffolding)
-</div>
+
+<script type="text/javascript">
+document.querySelector('body').classList.add('markdown-body');
+</script>
