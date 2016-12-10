@@ -23,3 +23,7 @@ console.log('are', ere, function (t) { return 'ire'; });
 ```css
 body { margin: 50px; background-image: url(http://www.example.com); }
 ```
+
+<script type="text/javascript">
+document.querySelector('body').classList.add('markdown-body');
+</script>
