@@ -26,8 +26,8 @@
 ## Collections
 
 {% for c in site.collections %}
-  **{{ c.label }}**
+### {{ c.label }}
   {% for p in c %}
-    - {{ p.title }}
+- {{ p.path }}
   {% endfor %}
 {% endfor %}
