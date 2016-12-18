@@ -1,5 +1,7 @@
 # HOME
 
+
+
 ## Steps
 
 1. Create a repository (or navigate to an existing repository)
@@ -15,9 +17,8 @@
 
 <ul>
 {% assign navigation_pages = site.html_pages %}
-{% for p in navigation_pages %}
-	{% if p.navigation_weight %}
-		<li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
-	{% endif %}
+  {% for p in navigation_pages %}
+    <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
