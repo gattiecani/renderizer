@@ -29,7 +29,7 @@
 {% capture list %}
 {% for p in site.html_pages | sort: 'date' %}
 {% assign array = (p.url | split: '/') %}
-|{{ array[0] }}|{{ array[1] }}|{{p.title}}{% if forloop.last %}^{% endif %}
+|{{ array[1] }}|{{ array[2] }}|{{p.title}}{% if forloop.last %}^{% endif %}
 {% endfor %}
 {% endcapture %}
 {% assign p_list = list | split: "^" %}
