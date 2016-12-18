@@ -17,10 +17,12 @@
 ## Pages
 
 <ul>
+{% assign cats = "" | split ' ' %}
 {% assign navigation_pages = site.html_pages %}
 {% for p in navigation_pages %}
   {% assign array = (p.url | split: '/') %}
-  {{array}}
+  {% assign cats = cats | concat: array[0] %}
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
 {% endfor %}
+{{cats}}
 </ul>
