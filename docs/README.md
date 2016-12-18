@@ -7,12 +7,7 @@
 
 1. Create a repository (or navigate to an existing repository)
 1. Commit a Markdown file via the web interface, just like you would any other file
-1. Activate GitHub Pages via your repository's settings
-
-## Links
-
-- [forms](forms)
-- [scaffolding](scaffolding)
+1. Activate GitHub Pages via your repository's settingsr
 
 ## Pages
 
@@ -27,7 +22,7 @@
 ## Hierarchy
 
 {% capture list %}
-{% for p in site.html_pages | sort: 'date' %}
+{% for p in site.html_pages | sort: "path" %}
 {% assign array = (p.url | split: '/') %}
 |{{ array[1] }}|{{ array[2] }}|{{p.title}}{% if forloop.last %}^{% endif %}
 {% endfor %}
