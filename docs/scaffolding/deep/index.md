@@ -1,4 +1,4 @@
-## console
+# console
 ```js
 console.log('ok');
 ```
