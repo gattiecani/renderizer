@@ -14,6 +14,15 @@
 <ul>
 {% assign navigation_pages = (site.html_pages | sort: "path" | reverse) %}
 {% for p in navigation_pages %}
+  <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>path: {{ p.path }} [{{p.path|split:'/' | join: '-'}}]</a></li>
+{% endfor %}
+</ul>
+
+## Loop
+
+<ul>
+{% assign navigation_pages = (site.html_pages | sort: "url" | reverse) %}
+{% for p in navigation_pages %}
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>title: {{ p.title }} [{{p.url|split:'/' | join: '-'}}]</a></li>
 {% endfor %}
 </ul>
