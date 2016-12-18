@@ -38,6 +38,7 @@
 {% endfor %}
 
 ### javascript
-{% for j in site.javascript %}
+{% assign sorted_blog = (site.javascript | sort: 'date' | reverse) %}
+{% for j in sorted_blog %}
 {{ j }}
 {% endfor %}
