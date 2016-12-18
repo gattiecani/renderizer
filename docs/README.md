@@ -30,6 +30,10 @@
 {% assign p_list = list | split: "^" %}
 {{p_list}}
 
+## Navigation
+
+{% include navigation.html context="/" %}
+
 <script type="text/javascript">
 document.querySelector('body').classList.add('markdown-body');
 </script>
