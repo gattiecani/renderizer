@@ -22,3 +22,12 @@
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
 {% endfor %}
 </ul>
+
+## Collections
+
+{% for c in site.collections %}
+  **{{ c.label }}**
+  {% for p in c %}
+    - {{ p.title }}
+  {% endfor %}
+{% endfor %}
