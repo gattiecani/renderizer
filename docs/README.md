@@ -27,7 +27,10 @@
 
 {% for c in site.collections %}
 ### {{ c.label }}
-{{c}}
+**props**
+  {% for pr in c %}
+- {{ pr }}
+  {% endfor %}
 **files**
   {% for p in c.files %}
 - {{ p }}
