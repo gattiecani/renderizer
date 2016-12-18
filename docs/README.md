@@ -14,7 +14,7 @@
 ## Pages
 
 <ul>
-{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+{% assign navigation_pages = site.html_pages %}
 {% for p in navigation_pages %}
 	{% if p.navigation_weight %}
 		<li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
