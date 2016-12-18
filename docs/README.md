@@ -9,7 +9,7 @@
 1. Commit a Markdown file via the web interface, just like you would any other file
 1. Activate GitHub Pages via your repository's settings
 
-## Loop
+## Path
 
 <ul>
 {% assign navigation_pages = (site.html_pages | sort: "path" | reverse) %}
@@ -18,10 +18,10 @@
 {% endfor %}
 </ul>
 
-## Loop
+## Url
 
 <ul>
-{% assign navigation_pages = (site.html_pages | sort: "url" | reverse) %}
+{% assign navigation_pages = (site.html_pages | sort: "url") %}
 {% for p in navigation_pages %}
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>title: {{ p.title }} [{{p.url|split:'/' | join: '-'}}]</a></li>
 {% endfor %}
