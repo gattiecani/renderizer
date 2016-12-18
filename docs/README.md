@@ -32,7 +32,7 @@
 - {{ p }}
   {% endfor %}
 **docs**
-  {% for p in c.docs %}
-- {{ p }}
+  {% for d in c.docs %}
+- {{ d }}
   {% endfor %}
 {% endfor %}
