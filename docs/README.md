@@ -26,7 +26,7 @@
 ## Collections
 
 {% for c in site.collections %}
-### {{ c.label }}
+### {{ c.label }}: {{ c.output }}
 **props**
   {% for pr in c %}
 - {{ pr }}
@@ -42,7 +42,7 @@
 {% endfor %}
 
 ### javascript
-{% assign sorted_blog = (site.javascript | sort: 'date' | reverse) %}
+{% assign sorted_blog = site.javascript %}
 {{ sorted_blog }}
 {% for j in sorted_blog %}
 {{ j }}
