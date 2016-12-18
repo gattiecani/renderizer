@@ -1,6 +1,2 @@
 gems:
   - 'jekyll-github-metadata'
-
-collections:
-  javascript:
-    output: true
