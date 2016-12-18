@@ -11,6 +11,9 @@
 - [forms](forms)
 - [scaffolding](scaffolding)
 
-<script type="text/javascript">
-document.querySelector('body').classList.add('markdown-body');
-</script>
+## Pages
+
+{% assign navigation_pages = site.html_pages %}
+{% for p in navigation_pages %}
+{{ p }}
+{% endfor %}
