@@ -12,16 +12,11 @@
 ## Loop
 
 <ul>
-{% assign navigation_pages = (site.html_pages | sort: "path") %}
+{% assign navigation_pages = (site.html_pages | sort: "path" | reverse) %}
 {% for p in navigation_pages %}
-  <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>title: {{ p.title }}, {{p.url|split:'/' | join: ', '}}</a></li>
+  <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>title: {{ p.title }} [{{p.url|split:'/' | join: '-'}}]</a></li>
 {% endfor %}
-{{cats}}
 </ul>
-
-## Navigation
-
-{% include navigation.html context="/" %}
 
 <script type="text/javascript">
 document.querySelector('body').classList.add('markdown-body');
