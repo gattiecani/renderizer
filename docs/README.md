@@ -42,8 +42,6 @@
 {% endfor %}
 
 ### javascript
-{% assign sorted_blog = site.javascript %}
-{{ sorted_blog }}
-{% for j in sorted_blog %}
+{% for j in site.javascript %}
 {{ j }}
 {% endfor %}
