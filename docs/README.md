@@ -28,6 +28,6 @@
 {% for c in site.collections %}
 ### {{ c.label }}
   {% for p in c %}
-- {{ p.path }}
+- {{ p }}
   {% endfor %}
 {% endfor %}
