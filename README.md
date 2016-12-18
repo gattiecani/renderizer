@@ -6,4 +6,4 @@ md website
 # Forks
 
 - `gh-pages` exist: fork build on gh-pages (wait)
-- `master/docs` source: fork has *GitHub Pages is currently disabled*
+- `master/docs` source: fork has *"GitHub Pages is currently disabled"*
