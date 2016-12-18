@@ -19,30 +19,8 @@
 <ul>
 {% assign navigation_pages = site.html_pages %}
 {% for p in navigation_pages %}
-  {{p}}
+  {% assign array = (p.url | split: '/') %}
+  {{array}}
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title | upcase }}</a></li>
 {% endfor %}
 </ul>
-
-## Collections
-
-{% for c in site.collections %}
-### {{ c.label }}: {{ c.output }}
-**props**
-  {% for pr in c %}
-- {{ pr }}
-  {% endfor %}
-**files**
-  {% for p in c.files %}
-- {{ p }}
-  {% endfor %}
-**docs**
-  {% for d in c.docs %}
-- {{ d }}
-  {% endfor %}
-{% endfor %}
-
-### javascript
-{% for j in site.javascript %}
-{{ j }}
-{% endfor %}
