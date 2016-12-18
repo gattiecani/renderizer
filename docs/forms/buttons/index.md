@@ -1,4 +1,4 @@
-## Buttons
+# Buttons
 ```html
 <button></button>
 ```
