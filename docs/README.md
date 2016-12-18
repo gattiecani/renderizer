@@ -1,6 +1,7 @@
 # HOME
 
-
+- {{ site.github.build_revision }}
+- [{{ site.github.repository_nwo }}]({{ site.github.repository_url }})
 
 ## Steps
 
