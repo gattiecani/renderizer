@@ -36,3 +36,8 @@
 - {{ d }}
   {% endfor %}
 {% endfor %}
+
+### javascript
+{% for j in site.javascript %}
+{{ j }}
+{% endfor %}
