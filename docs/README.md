@@ -26,3 +26,7 @@
 {% endfor %}
 {{cats}}
 </ul>
+
+<script type="text/javascript">
+document.querySelector('body').classList.add('markdown-body');
+</script>
