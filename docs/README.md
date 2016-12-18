@@ -27,6 +27,7 @@
 
 {% for c in site.collections %}
 ### {{ c.label }}
+{{c}}
 **files**
   {% for p in c.files %}
 - {{ p }}
@@ -39,6 +40,7 @@
 
 ### javascript
 {% assign sorted_blog = (site.javascript | sort: 'date' | reverse) %}
+{{ sorted_blog }}
 {% for j in sorted_blog %}
 {{ j }}
 {% endfor %}
