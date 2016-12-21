@@ -1,3 +1,3 @@
 {% for gig in site.data.cosmonauti %}
-1. **{{gig.city}}** – {{gig.date | date_to_long_string}} @ {{gig.venue}}
+{{ gig.date | date: "%-d" }},{{ gig.date | date: "%-m" }},{{ gig.date | date: "%-Y" }},{{gig.city}},{{gig.venue}}
 {% endfor %}
