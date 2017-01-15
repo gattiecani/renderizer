@@ -1,2 +1,2 @@
-{% for data in site.data.dates %}- {{ data.data | date: "%Y" }}  
+{% for d in site.data.dates %}- {{ d.data | date: "%Y" }}  
 {% endfor %}
