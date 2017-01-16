@@ -12,3 +12,5 @@
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="link-gray"{% endif %}>path: {{ p.path }} [{{p.path|split:'/' | join: '-'}}]</a></li>
 {% endfor %}
 </ul>
+
+{% include_relative footer.md }}
