@@ -1,7 +1,7 @@
 # HOME
 
-- build: {{ site.github.build_revision }}
 - repository: [{{ site.github.repository_nwo }}]({{ site.github.repository_url }})
+- build: `{{ site.github.build_revision }}`
 
 ## Steps
 
