@@ -1,4 +1,0 @@
-
-```css
-body{color:black;}
-```
