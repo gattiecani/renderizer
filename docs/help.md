@@ -13,4 +13,4 @@
 {% endfor %}
 </ul>
 
-{% include_relative footer.md }}
+{% include_relative footer.md %}
