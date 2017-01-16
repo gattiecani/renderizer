@@ -8,4 +8,4 @@
 {% endfor %}
 </ul>
 
-{% include footer.md p = {{ page }} %}
+{% include footer.md %}
