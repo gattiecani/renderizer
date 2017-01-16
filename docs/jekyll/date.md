@@ -1,2 +1,2 @@
-{% for d in site.data.dates %}- {{ d.data | date: "%B %-d %Y" }}  
+{% for d in site.data.dates %}- {{ d | inspect }} `%B %-d %Y` {{ d.data | date: "%B %-d %Y" }}  
 {% endfor %}
