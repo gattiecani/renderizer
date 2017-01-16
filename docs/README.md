@@ -1,8 +1,3 @@
-# HOME
-
-- repository: [{{ site.github.repository_nwo }}]({{ site.github.repository_url }})
-- build: `{{ site.github.build_revision }}`
-
 ## Steps
 
 1. Create a repository (or navigate to an existing repository)
@@ -29,6 +24,4 @@
 {% endfor %}
 </ul>
 
-<script type="text/javascript">
-document.querySelector('body').classList.add('markdown-body');
-</script>
+{% include_relative footer.md }}
