@@ -8,4 +8,4 @@
 {% endfor %}
 </ul>
 
-{% include_relative footer.md %}
+{% include footer.md %}
