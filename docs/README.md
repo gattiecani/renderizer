@@ -1,4 +1,4 @@
-## {{ site.github.project_title }}
+## Home
 
 <ul>
 {% assign navigation_pages = (site.html_pages | sort: "url") %}
