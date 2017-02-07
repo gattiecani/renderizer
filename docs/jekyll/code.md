@@ -12,12 +12,16 @@ Locations: 3
 {% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
 ```
 
-**One or some locations**
-
 ```liquid
 {% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
 ```
 
 ```liquid
+{% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
+```
+
+```liquid
+{% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
+{% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
 {% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
 ```
