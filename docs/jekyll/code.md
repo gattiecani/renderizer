@@ -39,3 +39,5 @@ ok
 {% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
 {% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
 {% endhighlight %}
+
+{% include footer.md %}
