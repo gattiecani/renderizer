@@ -16,11 +16,6 @@ ok
 
 ```liquid
 {% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
-```
-
-ok
-
-```liquid
 {% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
 ```
 
