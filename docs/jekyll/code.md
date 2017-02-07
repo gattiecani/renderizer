@@ -11,17 +11,31 @@ Locations: 3
 ```liquid
 {% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
 ```
+
 ok
+
 ```liquid
 {% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
 ```
+
 ok
+
 ```liquid
 {% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
 ```
+
 ok
+
 ```liquid
 {% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
 {% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
 {% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
 ```
+
+ok
+
+{% highlight liquid %}
+{% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
+{% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
+{% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
+{% endhighlight %}
