@@ -36,3 +36,11 @@ ok
 {% endhighlight %}
 
 {% include footer.md %}
+
+okok
+
+{{ "{% highlight liquid "}}%}
+{% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
+{% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
+{% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
+{{ "{% endhighlight "}}%}
