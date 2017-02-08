@@ -18,6 +18,8 @@ Should render: ["Seattle", "Tacoma"]
 
 ## Push
 
+Add as last.
+
 ```liquid
 {% raw %}{{ page.tags | push: 'Spokane' | inspect }}{% endraw %}
 ```
@@ -28,6 +30,8 @@ Should render: ['Seattle', 'Tacoma', 'Spokane']
 
 ## Pop
 
+Take the first.
+
 ```liquid
 {% raw %}{{ page.tags | pop | inspect }}{% endraw %}
 ```
@@ -37,6 +41,8 @@ Should render: ['Seattle']
 {{ page.tags | pop | inspect }}
 
 ## Shift
+
+Take the last.
 
 ```liquid
 {% raw %}{{ page.tags | shift | inspect }}{% endraw %}
@@ -49,6 +55,8 @@ from {{ page.tags | inspect }}
 Should render: ['Tacoma']
 
 ## Unshift
+
+Add as first.
 
 ```liquid
 {% raw %}{{ page.tags | unshift: "Olympia" | inspect }}{% endraw %}
