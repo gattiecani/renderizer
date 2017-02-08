@@ -2,39 +2,49 @@
 tags: ['Seattle', 'Tacoma']
 ---
 
-## Inspect tags
+# Array
+
+**Inspect page tags**
+
+```liquid
+{% raw %}{{ page.tags | inspect }}{% endraw %}
+```
+
+Should render: ["Seattle", "Tacoma"]
 
 {{ page.tags | inspect }}
 
 ## Push
 
 ```liquid
-{% raw %}{{ page.tags | push: 'Spokane' }}{% endraw %}
+{% raw %}{{ page.tags | push: 'Spokane' | inspect }}{% endraw %}
 ```
 
-{{ page.tags | push: 'Spokane' | inspect }}
+Should render: ['Seattle', 'Tacoma', 'Spokane']
 
-Should be: ['Seattle', 'Tacoma', 'Spokane']
+{{ page.tags | push: 'Spokane' | inspect }}
 
 ## Pop
 
 ```liquid
-{% raw %}{{ page.tags | pop }}{% endraw %}
+{% raw %}{{ page.tags | pop | inspect }}{% endraw %}
 ```
 
+Should render: ['Seattle']
+
 {{ page.tags | pop | inspect }}
-Should be: ['Seattle']
 
 ## Shift
 
 ```liquid
 {% raw %}{{ page.tags | shift }}{% endraw %}
 ```
+
 from {{ page.tags | inspect }}
 
-{{ page.tags | shift }}
+Should render: ['Tacoma']
 
-Should be: ['Tacoma']
+{{ page.tags | shift }}
 
 ## Unshift
 
@@ -42,7 +52,7 @@ Should be: ['Tacoma']
 {% raw %}{{ page.tags | unshift: "Olympia" }}{% endraw %}
 ```
 
-{{ page.tags | unshift: "Olympia" }}
+Return: {{ page.tags | unshift: "Olympia" }}
 
 Should be: ['Olympia', 'Seattle', 'Tacoma']
 
