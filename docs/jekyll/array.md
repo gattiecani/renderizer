@@ -14,7 +14,7 @@ Array filters are [NON-DESTRUCTIVE](https://ashmaroli.github.io/jekyll/docs/temp
 
 Should render: ["Seattle", "Tacoma"]
 
-{{ page.tags | inspect }}
+Render: {{ page.tags | inspect }}
 
 ## Push
 
@@ -26,7 +26,7 @@ Add as last.
 
 Should render: ['Seattle', 'Tacoma', 'Spokane']
 
-{{ page.tags | push: 'Spokane' | inspect }}
+Render: {{ page.tags | push: 'Spokane' | inspect }}
 
 ## Pop
 
@@ -38,7 +38,7 @@ Take the first.
 
 Should render: ['Seattle']
 
-{{ page.tags | pop | inspect }}
+Render: {{ page.tags | pop | inspect }}
 
 ## Shift
 
@@ -50,9 +50,9 @@ Take the last.
 
 from {{ page.tags | inspect }}
 
-{{ page.tags | shift | inspect }}
-
 Should render: ['Tacoma']
+
+Render: {{ page.tags | shift | inspect }}
 
 ## Unshift
 
@@ -62,8 +62,8 @@ Add as first.
 {% raw %}{{ page.tags | unshift: "Olympia" | inspect }}{% endraw %}
 ```
 
-Return: {{ page.tags | unshift: "Olympia" | inspect }}
+Should render: ['Olympia', 'Seattle', 'Tacoma']
 
-Should be: ['Olympia', 'Seattle', 'Tacoma']
+Render: {{ page.tags | unshift: "Olympia" | inspect }}
 
 {% include footer.md %}
