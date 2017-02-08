@@ -52,7 +52,8 @@ Should render: ['Tacoma']
 {% raw %}{{ page.tags | unshift: "Olympia" }}{% endraw %}
 ```
 
-Return: {{ page.tags | unshift: "Olympia" }}
+Return: {% assign out = page.tags | unshift: "Olympia" %}{{out}}
+{{out|inspect}}
 
 Should be: ['Olympia', 'Seattle', 'Tacoma']
 
