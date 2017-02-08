@@ -2,7 +2,9 @@
 tags: ['Seattle', 'Tacoma']
 ---
 
-# Array
+# Array Filters
+
+Array filters are [NON-DESTRUCTIVE](https://ashmaroli.github.io/jekyll/docs/templates/)
 
 **Inspect page tags**
 
@@ -37,23 +39,22 @@ Should render: ['Seattle']
 ## Shift
 
 ```liquid
-{% raw %}{{ page.tags | shift }}{% endraw %}
+{% raw %}{{ page.tags | shift | inspect }}{% endraw %}
 ```
 
 from {{ page.tags | inspect }}
 
-Should render: ['Tacoma']
+{{ page.tags | shift | inspect }}
 
-{{ page.tags | shift }}
+Should render: ['Tacoma']
 
 ## Unshift
 
 ```liquid
-{% raw %}{{ page.tags | unshift: "Olympia" }}{% endraw %}
+{% raw %}{{ page.tags | unshift: "Olympia" | inspect }}{% endraw %}
 ```
 
-Return: {% assign out = page.tags | unshift: "Olympia" %}{{out}}
-{{out|inspect}}
+Return: {{ page.tags | unshift: "Olympia" | inspect }}
 
 Should be: ['Olympia', 'Seattle', 'Tacoma']
 
