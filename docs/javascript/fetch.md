@@ -13,7 +13,17 @@ fetch('https://public-api.wordpress.com/rest/v1.1/sites/gattiecani.wordpress.com
 }).then(printList).catch(console.log);
 
 function printList(j){
-  console.log(j);
+  var posts = j.posts.map(function(p) {
+    var article = document.createElement('article');
+    var categories = Object.keys(p.terms.category).join(', ');
+    article.innerHTML = "<header><h2>" + p.title + "</h2><p>" + categories + "</p></header>";
+    article.innerHTML += p.content;
+    return article;
+  });
+  
+  var append = posts.map(function(e){
+    document.body.appendChild(e);
+  });
 }
 </script>
 
