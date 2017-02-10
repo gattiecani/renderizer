@@ -22,7 +22,7 @@ function printList(j){
   });
   
   var append = posts.map(function(e){
-    document.body.appendChild(e);
+    document.querySelector('.container').appendChild(e);
   });
 }
 </script>
