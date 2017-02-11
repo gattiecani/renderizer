@@ -22,7 +22,7 @@ function printList(j){
   var posts = j.posts.map(function(p) {
     var article = document.createElement('article');
     var categories = Object.keys(p.terms.category).join(', ');
-    var tags = Object.keys(p.terms.tags)[0];
+    var tags = Object.keys(p.tags)[0];
     article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + tags + "€</p></header>";
     article.innerHTML += p.content;
     return article;
