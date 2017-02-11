@@ -1,4 +1,4 @@
-<hr>
+<hr class="footer">
 - [homepage]({{ site.github.url }})
 - repository: [{{ site.github.repository_nwo }}]({{ site.github.repository_url }})
 - build: `{{ site.github.build_revision }}`
