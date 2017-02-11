@@ -1,12 +1,12 @@
 # Fetch
+
+Include fetch
+
+```js
 <script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
-<style>
-article:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+```
+
+<script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
 <script>
 fetch('https://public-api.wordpress.com/rest/v1.1/sites/potlachsite.wordpress.com/posts/').then(function(response){
   if (response.status >= 200 && response.status < 300) {
@@ -21,8 +21,8 @@ fetch('https://public-api.wordpress.com/rest/v1.1/sites/potlachsite.wordpress.co
 function printList(j){
   var posts = j.posts.map(function(p) {
     var article = document.createElement('article');
-    var categories = Object.keys(p.terms.category).join(', ');
-    var tags = Object.keys(p.tags)[0];
+    var categories = Object.keys(p.terms.category).join(', ') || '';
+    var tags = Object.keys(p.tags)[0] || 0;
     article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + tags + "€</p></header>";
     article.innerHTML += p.content;
     return article;
