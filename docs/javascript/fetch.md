@@ -24,8 +24,11 @@ function printList(j){
     var article = document.createElement('article');
     var categories = Object.keys(p.terms.category).join(', ') || '';
     var tags = Object.keys(p.tags)[0] || 0;
-    article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + tags + " €</p></header>";
+    article.innerHTML = "<header><h2>" + p.title + "</h2>" +
+      "<p>Categoria: " + categories + "<br>Prezzo: " + tags + " €</p>" +
+      "</header>";
     article.innerHTML += p.content;
+    if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
     return article;
   });
   var parent = document.querySelector('.container');
@@ -34,6 +37,25 @@ function printList(j){
     parent.insertBefore(e ,reference);
   });
 }
+```
+
+Post data
+
+```json
+{
+  title: "...",
+  content: "...",
+  tags: {
+    15.30: {...}
+  },
+  terms: {
+    category: {
+      Cani: {...}
+    }
+  },
+  post_thumbnail: {
+    URL: "..."
+  }
 ```
 
 <script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
