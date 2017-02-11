@@ -23,9 +23,9 @@ function printList(j){
   var posts = j.posts.map(function(p) {
     var article = document.createElement('article');
     var categories = Object.keys(p.terms.category).join(', ') || '';
-    var tags = Object.keys(p.tags)[0] || 0;
+    var firstTags = Object.keys(p.tags)[0] || 0;
     article.innerHTML = "<header><h2>" + p.title + "</h2>" +
-      "<p>Categoria: " + categories + "<br>Prezzo: " + tags + " €</p>" +
+      "<p>Categoria: " + categories + "<br>Prezzo: " + firstTags + " €</p>" +
       "</header>";
     article.innerHTML += p.content;
     if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
@@ -75,8 +75,8 @@ function printList(j){
   var posts = j.posts.map(function(p) {
     var article = document.createElement('article');
     var categories = Object.keys(p.terms.category).join(', ') || '';
-    var tags = Object.keys(p.tags)[0] || 0;
-    article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + tags + " €</p></header>";
+    var firstTags = Object.keys(p.tags)[0] || 0;
+    article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + firstTags + " €</p></header>";
     article.innerHTML += p.content;
     if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
     return article;
