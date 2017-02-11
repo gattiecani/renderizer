@@ -41,7 +41,7 @@ function printList(j){
 
 Post data
 
-```json
+```js
 {
   title: "...",
   content: "...",
