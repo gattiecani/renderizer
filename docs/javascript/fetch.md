@@ -56,6 +56,7 @@ Post data
   post_thumbnail: {
     URL: "..."
   }
+}
 ```
 
 <script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
@@ -77,6 +78,7 @@ function printList(j){
     var tags = Object.keys(p.tags)[0] || 0;
     article.innerHTML = "<header><h2>" + p.title + "</h2><p>Categoria: " + categories + "<br>Prezzo: " + tags + " €</p></header>";
     article.innerHTML += p.content;
+    if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
     return article;
   });
   var parent = document.querySelector('.container');
