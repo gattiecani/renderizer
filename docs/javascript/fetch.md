@@ -27,9 +27,10 @@ function printList(j){
     article.innerHTML += p.content;
     return article;
   });
-  
+  var parent = document.querySelector('.container');
+  var reference = document.querySelector('.footer');
   var append = posts.map(function(e){
-    document.querySelector('.container').appendChild(e);
+    parent.insertBefore(e ,reference);
   });
 }
 </script>
@@ -54,9 +55,10 @@ function printList(j){
     article.innerHTML += p.content;
     return article;
   });
-  
+  var parent = document.querySelector('.container');
+  var reference = document.querySelector('.footer');
   var append = posts.map(function(e){
-    document.querySelector('.container').appendChild(e);
+    parent.insertBefore(e ,reference);
   });
 }
 ```
