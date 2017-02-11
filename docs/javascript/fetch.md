@@ -8,7 +8,7 @@ article:after {
 }
 </style>
 <script>
-fetch('https://public-api.wordpress.com/rest/v1.1/sites/gattiecani.wordpress.com/posts/?category=cani-2').then(function(response){
+fetch('https://public-api.wordpress.com/rest/v1.1/sites/potlachsite.wordpress.com/posts/').then(function(response){
   if (response.status >= 200 && response.status < 300) {
     return response.json();
   } else {
