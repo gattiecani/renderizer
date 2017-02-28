@@ -1,16 +1,16 @@
 ## Loop `for i in (1..10)` with `forloop.`
 
-<table>
-<thead>
+<table style="text-align: center;">
+<thead style="font-weight: bold;">
 <tr>
-<td>`i`</td>
-<td>`length`</td>
-<td>`index`</td>
-<td>`index0`</td>
-<td>`rindex`</td>
-<td>`rindex0`</td>
-<td>`first`</td>
-<td>`last`</td>
+<td>i</td>
+<td>length</td>
+<td>index</td>
+<td>index0</td>
+<td>rindex</td>
+<td>rindex0</td>
+<td>first</td>
+<td>last</td>
 </tr>
 </thead>
 <tbody>
