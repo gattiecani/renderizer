@@ -30,7 +30,7 @@
 </table>
 
 ## Continue loop
-{{page|inspect}}
+
 Skip anything in the hidden_pages array, but keep looping over the rest of the values
 
 {% assign hidden_pages = page.url %}
