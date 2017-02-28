@@ -35,7 +35,7 @@ Skip anything in the hidden_pages array, but keep looping over the rest of the v
 
 {% assign hidden_pages = page.url %}
 {% for page in site.pages %}{% if hidden_pages contains page.url %}{% continue %}{% endif %}
-- [{{ page.title | default: page.basename }}]({{page.url | absolute_url}}){% endfor %}
+- [{{ page.title | default: page.name }}]({{page.url | absolute_url}}){% endfor %}
 
 ## Break loop
 
@@ -43,6 +43,6 @@ After we reach the "cutoff" page, stop the list and get on with whatever's after
 
 {% assign cutoff_page = page.url %}
 {% for page in site.pages %}
-- [{{ page.title | default: page.basename }}]({{page.url | absolute_url}}){% if cutoff_page == page.url %}{% break %}{% endif %}{% endfor %}
+- [{{ page.title | default: page.name }}]({{page.url | absolute_url}}){% if cutoff_page == page.url %}{% break %}{% endif %}{% endfor %}
 
 {% include footer.md %}
