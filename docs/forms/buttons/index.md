@@ -9,3 +9,5 @@
 <a href="#"><button>Ciao</button></a>
 ```
 <a href="#"><button>Ciao</button></a>
+
+{% include footer.md %}
