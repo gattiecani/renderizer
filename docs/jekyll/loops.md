@@ -1,15 +1,33 @@
 ## Loop `for i in (1..10)` with `forloop.`
 
+<table>
+<thead>
+<tr>
+<td>`i`</td>
+<td>`length`</td>
+<td>`index`</td>
+<td>`index0`</td>
+<td>`rindex`</td>
+<td>`rindex0`</td>
+<td>`first`</td>
+<td>`last`</td>
+</tr>
+</thead>
+<tbody>
 {% for i in (1..10) %}
-#### `i` – {{ i }}
-- `length` – {{ forloop.length }}
-- `index` – {{ forloop.index }}
-- `index0` – {{ forloop.index0 }}
-- `rindex` – {{ forloop.rindex }}
-- `rindex0` – {{ forloop.rindex0 }}
-- `first` – {{ forloop.first }}
-- `last` – {{ forloop.last }}
+<tr>
+<td>{{ i }}</td>
+<td>{{ forloop.length }}</td>
+<td>{{ forloop.index }}</td>
+<td>{{ forloop.index0 }}</td>
+<td>{{ forloop.rindex }}</td>
+<td>{{ forloop.rindex0 }}</td>
+<td>{{ forloop.first }}</td>
+<td>{{ forloop.last }}</td>
+</tr>
 {% endfor %}
+</tbody>
+</table>
 
 ## Continue & Break
 
@@ -17,12 +35,12 @@ Skip anything in the hidden_pages array, but keep looping over the rest of the v
 
 {% assign hidden_pages = page.url %}
 {% for page in site.pages %}{% if hidden_pages contains page.url %}{% continue %}{% endif %}
-- [{{ page.title | default: page.id }}]({{page.url | absolute_url}}){% endfor %}
+- [{{ page.title | default: page.basename }}]({{page.url | absolute_url}}){% endfor %}
 
 After we reach the "cutoff" page, stop the list and get on with whatever's after the "for" loop
 
 {% assign cutoff_page = page.url %}
 {% for page in site.pages %}
-- [{{ page.title | default: page.id }}]({{page.url | absolute_url}}){% if cutoff_page == page.url %}{% break %}{% endif %}{% endfor %}
+- [{{ page.title | default: page.basename }}]({{page.url | absolute_url}}){% if cutoff_page == page.url %}{% break %}{% endif %}{% endfor %}
 
 {% include footer.md %}
