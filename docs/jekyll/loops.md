@@ -33,4 +33,4 @@ After we reach the "cutoff" page, stop the list and get on with whatever's after
   {% endif %}
 {% endfor %}
 
-{% include footer.html %}
+{% include footer.md %}
