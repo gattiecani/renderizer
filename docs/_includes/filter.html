@@ -1,0 +1,16 @@
+{% assign table = include.table %}
+<ul>
+{% for level in table %}
+	{% if level[0].size %}
+		<li>{{ level[0] }}:
+		{% if level[1].first == nil %}{{ level[1] }}{% endif %}
+		{% assign table = level[1] %}{% if table.first %}{% include filter.html table=table %}{% endif %}</li>
+	{% else %}
+		{% if level.first %}
+			<li>{% unless level.size == 1 %}<ul>{% endunless %}{% for next in level %}{% unless level.size == 1 %}<li>{% endunless %}{{ next[0] }}: {% if next[1].first == nil %}{{ next[1] }}{% else %}{% assign table = next[1] %}{% include filter.html table=table %}{% endif %}{% unless level.size == 1 %}</li>{% endunless %}{% endfor %}{% unless level.size == 1 %}</ul>{% endunless %}</li>
+		{% else %}
+			<li>{{ level }}</li>
+		{% endif %}
+	{% endif %}
+{% endfor %}
+</ul>
