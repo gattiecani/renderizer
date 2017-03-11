@@ -1,6 +1,6 @@
 <hr class="footer">
 - [homepage]({{ site.github.url }})
-- This page: [{{ site.github.repository_url }}/blob/master/{{ page.path }}]({{ site.github.repository_url }}/blob/master/{{ page.path }})
+- This page: [{{ site.github.repository_url }}/blob/master/{{ site.source }}/{{ page.path }}]({{ site.github.repository_url }}/blob/master/{{ site.source }}/{{ page.path }})
 - build: `{{ site.github.build_revision }}`
 - site time: {{ site.time }}
 
