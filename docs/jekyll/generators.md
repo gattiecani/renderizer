@@ -24,7 +24,11 @@ generators:
         pro2: 2
 ---
 
-**FILTER**
+# Generators
+
+``` liquid
+{% raw %}{% include filter.html table=page.generators %}{% endraw %}
+```
 
 {% include filter.html table=page.generators %}
 
