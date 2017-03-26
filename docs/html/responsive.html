@@ -42,4 +42,12 @@ html {
   <li><a href="http://www.creativebloq.com/how-to/design-a-responsive-site-with-em-based-sizing">Article</a></li>
 </ul>
 
-{% include footer.md %}
+<h3>Docs</h3>
+
+<ul>
+  <li><code>1em</code> is the same as the font-size of the current element (more specifically, the width of a capital letter M.) Font sizes are inherited by elements from their parents
+  <li>The <code>rem</code> (root em) works in exactly the same way as the em, except that it will always equal the size of the default base font-size</li>
+  <li>vw, vh: Respectively these are 1/100th of the width of the viewport, and 1/100th of the height of the viewport, the smaller of the two <code>vmin</code>, or the larger of the two <code>vmax</code></li>
+</ul>
+
+{% capture footer %}{% include footer.md %}{% endcapture %}{{ footer | markdownify }}
