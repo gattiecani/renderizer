@@ -1,0 +1,42 @@
+---
+layout: nil
+---
+<!doctype html>
+<title>responsive with CSS em</title>
+<meta charset="utf-8">
+
+<style type="text/css">
+html {
+  font-size: calc(0.6em + 1vw);
+}
+</style>
+
+<h1>responsive with CSS em</h1>
+
+<p>
+This documents the polyfillable parts of the
+<a href="https://fetch.spec.whatwg.org/">WHATWG fetch spec</a>.
+</p>
+
+<p>
+Other data structures need to be encoded beforehand as one of the above types.
+For instance, <code>JSON.stringify(data)</code> can be used to serialize a
+data structure into a JSON string.
+</p>
+
+<h2>responsive with CSS em</h2>
+<p>
+Note that the promise <strong>won't</strong> be rejected in case of HTTP 4xx or 5xx server responses.
+The promise will be resolved just as it would be for HTTP 2xx.
+Inspect the <code>response.status</code> number within the resolved callback to add conditional handling of server errors to your code.
+</p>
+
+<h3>A List</h3>
+
+<ul>
+  <li><code>text()</code> - yields the response text as String</li>
+  <li><code>json()</code> - yields the result of <code>JSON.parse(responseText)</code></li>
+  <li><code>blob()</code> - yields a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a></li>
+  <li><code>arrayBuffer()</code> - yields an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></li>
+  <li><code>formData()</code> - yields <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</a> that can be forwarded to another request</li>
+</ul>
