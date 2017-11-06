@@ -31,7 +31,7 @@
 
 ## Continue loop `{% raw %}{% continue %}{% endraw %}`
 
-Skip anything in the `hidden_pages` array, but keep looping over the rest of the values.
+Skip anything in the `hidden_pages` array, but keep looping over the rest of the values.  
 `{% raw %}{% assign hidden_pages = page.url %}{% endraw %}`
 
 {% assign hidden_pages = page.url %}
@@ -40,7 +40,7 @@ Skip anything in the `hidden_pages` array, but keep looping over the rest of the
 
 ## Break loop `{% raw %}{% break %}{% endraw %}`
 
-After we reach the "cutoff" page, stop the list and get on with whatever's after the "for" loop.
+After we reach the "cutoff" page, stop the list and get on with whatever's after the "for" loop.  
 `{% raw %}{% assign cutoff_page = page.url %}{% endraw %}`
 
 {% assign cutoff_page = page.url %}
