@@ -29,17 +29,19 @@
 </tbody>
 </table>
 
-## Continue loop
+## Continue loop `{% raw %}{% continue %}{% endraw %}`
 
-Skip anything in the hidden_pages array, but keep looping over the rest of the values
+Skip anything in the `hidden_pages` array, but keep looping over the rest of the values.
+`{% raw %}{% assign hidden_pages = page.url %}{% endraw %}`
 
 {% assign hidden_pages = page.url %}
 {% for page in site.pages %}{% if hidden_pages contains page.url %}{% continue %}{% endif %}
 - [{{ page.title | default: page.name }}]({{page.url | absolute_url}}){% endfor %}
 
-## Break loop
+## Break loop `{% raw %}{% break %}{% endraw %}`
 
-After we reach the "cutoff" page, stop the list and get on with whatever's after the "for" loop
+After we reach the "cutoff" page, stop the list and get on with whatever's after the "for" loop.
+`{% raw %}{% assign cutoff_page = page.url %}{% endraw %}`
 
 {% assign cutoff_page = page.url %}
 {% for page in site.pages %}
