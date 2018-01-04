@@ -3,6 +3,15 @@
 
 # Math
 
+### `modulo`
+
+Divides an output by a number and returns the remainder.
+
+```liquid
+{{ raw }}{{ 12 | modulo:5 }}{{ endraw }}
+2
+```
+
 ### `round`
 
 Rounds the output to the nearest integer or specified number of decimals.
