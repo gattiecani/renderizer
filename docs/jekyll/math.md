@@ -8,9 +8,9 @@
 Rounds the output to the nearest integer or specified number of decimals.
 
 ```liquid
-{{ 4.6 | round }}
-{{ 4.3 | round }}
-{{ 4.5612 | round: 2 }}
+{{ raw }}{{ 4.6 | round }}{{ endraw }}
+{{ raw }}{{ 4.3 | round }}{{ endraw }}
+{{ raw }}{{ 4.5612 | round: 2 }}{{ endraw }}
 5
 4
 4.56
@@ -21,8 +21,8 @@ Rounds the output to the nearest integer or specified number of decimals.
 Rounds an output down to the nearest integer.
 
 ```jekyll
-{{ 4.6 | floor }}
-{{ 4.3 | floor }}
+{{ raw }}{{ 4.6 | floor }}{{ endraw }}
+{{ raw }}{{ 4.3 | floor }}{{ endraw }}
 4
 4
 ```
@@ -31,8 +31,8 @@ Rounds an output down to the nearest integer.
 
 Rounds an output up to the nearest integer.
 ```liquid
-{{ 4.6 | ceil }}
-{{ 4.3 | ceil }}
+{{ raw }}{{ 4.6 | ceil }}{{ endraw }}
+{{ raw }}{{ 4.3 | ceil }}{{ endraw }}
 5
 5
 ```
