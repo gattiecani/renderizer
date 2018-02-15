@@ -2,4 +2,4 @@
 - {{ v[0] }}: {{ v[1] }} {{ v | inspect }}
 {% endfor %}
 
-{% include footer.html %}
+{% include footer.md %}
