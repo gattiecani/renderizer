@@ -19,6 +19,6 @@ Read dates from [`_data/dates.csv`](https://github.com/gattiecani/renderizer/blo
 
 # Now
 
-{{ now | date_to_rfc822 }}
+{{ "now" | date_to_rfc822 }}
 
 {% include footer.md %}
