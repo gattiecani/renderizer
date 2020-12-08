@@ -2,7 +2,7 @@
 
 <details><summary>This style.css (2018)<br><br></summary>
 
-```css
+{%- highlight css -%}
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -5737,8 +5737,10 @@ pre {
 .highlight {
 	background-color: #f8f8f8
 }
-```
+{%- endhighlight -%}
 </details>
+
+{% include footer.html %}
 
 <script type="text/javascript">
 document.querySelector('body').classList.add('markdown-body');
