@@ -5740,7 +5740,7 @@ pre {
 {%- endhighlight -%}
 </details>
 
-{% include footer.html %}
+{% include footer.md %}
 
 <script type="text/javascript">
 document.querySelector('body').classList.add('markdown-body');
