@@ -8,31 +8,25 @@ Locations: 3
 
 ## liquid
 
-```liquid
-{% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
-```
-
-ok
+Try single quote
 
 ```liquid
-{% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
-{% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
+{% raw %}{% include 'maps/map.html' name="xkcd" %}{% endraw %}
 ```
 
-ok
+Try liquid highlight
 
-```liquid
-{% raw %}{% include "maps/map.html" name="xkcd" %}  
-{% include "maps/map.html" name="Nazzano" %}  
-{% include "maps/map.html" name="nazzano" %}{% endraw %}
+{%- highlight liquid -%}
+{% raw %}{% include maps/map.html name="Nazzano" %}{% endraw %}
+{% raw %}{% include 'maps/map.html' name="nazzano" %}{% endraw %}
+{%- endhighlight -%}
+
+Try Kramdown `{:.language-liquid}`
+
 ```
-
-ok
-
-{% highlight liquid %}
-{% raw %}{% include "maps/map.html" name="xkcd" %}{% endraw %}
-{% raw %}{% include "maps/map.html" name="Nazzano" %}{% endraw %}
-{% raw %}{% include "maps/map.html" name="nazzano" %}{% endraw %}
-{% endhighlight %}
+{% raw %}{% include maps/map.html name="xkcd" %}  
+{% include 'maps/map.html' name="Nazzano" %}{% endraw %}
+```
+{:.language-liquid}
 
 {% include footer.md %}
