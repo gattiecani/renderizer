@@ -7,7 +7,7 @@
 ## Path
 
 <ul>
-{% assign navigation_pages = (site.html_pages | sort: "path" | reverse) %}
+{% assign navigation_pages = site.html_pages | sort: "path" | reverse %}
 {% for p in navigation_pages %}
   <li><a href="{{ p.url | absolute_url }}" {% if p.url == page.url %}class="link-gray"{% endif %}>path: {{ p.path }} [{{p.path|split:'/' | join: '-'}}]</a></li>
 {% endfor %}
