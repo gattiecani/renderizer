@@ -3,7 +3,7 @@
 Include fetch
 
 ```html
-<script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
+<script type="module" src="https://rawgit.com/github/fetch/master/fetch.js"></script>
 ```
 
 Fetch posts
@@ -59,7 +59,7 @@ Post data
 }
 ```
 
-<script src="https://rawgit.com/github/fetch/master/fetch.js"></script>
+<script type="module" src="https://rawgit.com/github/fetch/master/fetch.js"></script>
 <script>
 fetch('https://public-api.wordpress.com/rest/v1.1/sites/potlachsite.wordpress.com/posts/').then(function(response){
   if (response.status >= 200 && response.status < 300) {
