@@ -32,7 +32,7 @@ function printList(j){
     return article;
   });
   var parent = document.querySelector('.markdown-body');
-  var reference = document.querySelector('.footer');
+  var reference = document.querySelector('hr');
   var append = posts.map(function(e){
     parent.insertBefore(e ,reference);
   });
@@ -82,7 +82,7 @@ function printList(j){
     return article;
   });
   var parent = document.querySelector('.markdown-body');
-  var reference = document.querySelector('.footer');
+  var reference = document.querySelector('hr');
   var append = posts.map(function(e){
     parent.insertBefore(e ,reference);
   });
