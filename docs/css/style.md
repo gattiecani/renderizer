@@ -5741,7 +5741,3 @@ pre {
 </details>
 
 {% include footer.md %}
-
-<script type="text/javascript">
-document.querySelector('body').classList.add('markdown-body');
-</script>
