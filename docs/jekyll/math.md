@@ -5,7 +5,7 @@
 Divides an output by a number and returns the remainder.
 
 ```liquid
-{% raw %}{% 12 | modulo:5 %}{% endraw %} = {% 12 | modulo:5 %}
+{% raw %}{{ 12 | modulo:5 }}{% endraw %} = {{ 12 | modulo:5 }}
 ```
 
 ### `round`
