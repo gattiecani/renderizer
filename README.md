@@ -5,7 +5,7 @@ md website
 
 # Style
 
-Page `{{ content }}`{:.language-liquid} will be injected inside `<div class="container-lg px-3 my-5 markdown-body">`{:.language-html} together with the `anchor` script.
+Page `{{ content }}` will be injected inside `<div class="container-lg px-3 my-5 markdown-body">` together with the `anchor` script.
 
 [__Add deep anchor links to your docs.__](https://www.bryanbraun.com/anchorjs/)
 
