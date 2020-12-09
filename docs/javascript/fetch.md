@@ -31,7 +31,7 @@ function printList(j){
     if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
     return article;
   });
-  var parent = document.querySelector('.container');
+  var parent = document.querySelector('.markdown-body');
   var reference = document.querySelector('.footer');
   var append = posts.map(function(e){
     parent.insertBefore(e ,reference);
@@ -81,7 +81,7 @@ function printList(j){
     if(p.post_thumbnail) article.innerHTML += "<br>thumbnail: " + p.post_thumbnail.URL;
     return article;
   });
-  var parent = document.querySelector('.container');
+  var parent = document.querySelector('.markdown-body');
   var reference = document.querySelector('.footer');
   var append = posts.map(function(e){
     parent.insertBefore(e ,reference);
