@@ -26,7 +26,7 @@ Rounds the output to the nearest integer or specified number of decimals.
 
 Rounds an output down to the nearest integer.
 
-```jekyll
+```liquid
 {% raw %}{{ 4.6 | floor }}{% endraw %}
 {{ 4.6 | floor }}
 {% raw %}{{ 4.3 | floor }}{% endraw %}
